@@ -36,6 +36,27 @@ The plugin is controlled via the ``config`` dictionary:
   (``capex``, ``fixed_opex``, ``variable_opex`` or ``remuneration``) and
   ``amount``; ``remuneration`` additionally requires an output ``carrier``.
 
+A configuration example:
+
+.. code-block:: json
+
+   "plugins": {
+       "investment_decisions": {
+           "profitability_bias_enabled": true,
+           "subsidies": [
+               {
+                   "technology": "photovoltaics",
+                   "node": "DE",
+                   "type": "remuneration",
+                   "amount": 0.11,
+                   "carrier": "electricity"
+               }
+           ],
+           "bias_weight": 0.4,
+           "bias_output_carriers": []
+       }
+   }
+
 .. literalinclude:: ../../../../zen_garden_plugins/investment_decisions/plugin.py
    :language: python
 
