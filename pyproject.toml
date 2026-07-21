@@ -23,6 +23,7 @@ dependencies = [
 
 [project.entry-points."zen_garden.plugins"]
 plugin_template = "zen_garden_plugins.plugin_template.plugin"
+reduced_cost = "zen_garden_plugins.reduced_cost.plugin"
 
 
 [project.optional-dependencies]
